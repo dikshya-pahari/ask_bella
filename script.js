@@ -78,14 +78,14 @@ function showNextText() {
             setTimeout(() => {
                 openBookBtn.style.display = 'block';
                 openBookBtn.classList.add('show');
-            }, 100); //put here 3000 in final
+            }, 300); //put here 3000 in final
         }
 
         currentTextIndex++;
         setTimeout(() => {
             textDiv.remove();
             showNextText();
-        }, 100); //put here 3000 in final
+        }, 3000); //put here 3000 in final
     }
 }
 
