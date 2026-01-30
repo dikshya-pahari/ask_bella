@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story ❤️</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Indie+Flower&family=Shadows+Into+Light&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Landing Page -->
+    <div id="landing">
+        <div id="landing-text-container"></div>
+        <button class="book-button" id="open-book" style="display: none;">Open </button>
+    </div>
+
+    <!-- Testing if she remembers dates -->
+     <!-- <div id="test_date"><h1>Let me Test your, Gold fish memory </h1></div> -->
+
+    <!-- Calendar Page -->
+    <div id="calendar-page">
+        <h1 class="calendar-title">Wait, lemme check if you remember the dates, My goldfish 😏<br><br>When did we first kiss?💕</h1>
+        <div class="calendar-container">
+            <div class="calendar-header">August 2025</div>
+            <div class="calendar-grid" id="calendar-grid"></div>
+        </div>
+        <div class="calendar-feedback" id="calendar-feedback"></div>
+        <button class="next-arrow" id="calendar-next">→</button>
+    </div>
+
+    <!-- Timer Page -->
+    <div id="timer-page">
+        <h1 class="timer-title">We've Been Together For 🫨 💌</h1>
+        <div class="timer-container">
+            <div class="timer-box">
+                <span class="timer-number" id="days">0</span>
+                <span class="timer-label">Days</span>
+            </div>
+            <div class="timer-box">
+                <span class="timer-number" id="hours">0</span>
+                <span class="timer-label">Hours</span>
+            </div>
+            <div class="timer-box">
+                <span class="timer-number" id="minutes">0</span>
+                <span class="timer-label">Minutes</span>
+            </div>
+            <div class="timer-box">
+                <span class="timer-number" id="seconds">0</span>
+                <span class="timer-label">Seconds</span>
+            </div>
+        </div>
+        <button class="next-arrow show" id="timer-next">→</button>
+    </div>
+
+    <!-- Timeline Page -->
+    <div id="timeline-page">
+        <img src="img/Bella&Me.png" 
+        style="height: 12rem; display: block; margin: 0 auto;" alt="">
+        <h1 class="timeline-title">Our Journey </h1>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">April 24th 2025</div>
+                    <div class="timeline-event">First Text</div>
+                    <div class="timeline-description">You spotted me on Bumble, hunted me down on Instagram, and couldn’t resist saying I’m cute? </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">June 24th 2025</div>
+                    <div class="timeline-event">I responded</div>
+                    <div class="timeline-description">After exactly 2 months (Oops..sowwy), I finally replied to your message request. Couldn’t believe I hadn’t responded this cutie yet! </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">July 23 2025</div>
+                    <div class="timeline-event">Our first date</div>
+                    <div class="timeline-description"> You showed up in all white like an angel, tall, adorable, with a star-shaped pimple patches on your cheek (cute). I was immediately smitten. </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">August 01 2025</div>
+                    <div class="timeline-event">Our first Kiss</div>
+                    <div class="timeline-description">The night under the stars at the drive-in movie. You held my hand through out the horror one haha…and then we kissed. My heart totally skipped a beat. I had made a mini bouquet for you to ask you to be my girlfriend (It was girlfriends day) but I chickened out LOL </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Aug 08 2025</div>
+                    <div class="timeline-event">Official! ❤️</div>
+                    <div class="timeline-description">It was our picnic date, and I had finally worked up the courage to ask you to be my girlfriend. My heart was racing, I was nervous… and thankfully, you said yes :D Definitely one of the best moments ever.</div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <button class="next-arrow show" id="timeline-next">→</button>
+        </div>
+    </div>
+
+    <!-- Dates Page -->
+    <div id="dates-page">
+        <h1 class="dates-title">Our Favorite Pictures <img src="img/Bella&Me2.png" style="height: 6rem; vertical-align: bottom;" alt=""></h1>
+        <div class="dates-container">
+            <div class="polaroid">
+                <img src="img/moment1.png.jpeg" alt="Park" class="polaroid-image">
+                <div class="polaroid-note">Frick Park Date 🌳 where we met luckeyy 🐈</div>
+                <div class="polaroid-date">Aug 31 2025</div>
+            </div>
+            <div class="polaroid">
+                <img src="img/moment2.jpeg" alt="Bella's selfie" class="polaroid-image">
+                <div class="polaroid-note">You sent a selfie with the matar paneer dish I had made for you (So cuteee) 🥘</div>
+                <div class="polaroid-date">Sep 18 2025</div>
+            </div>
+            <div class="polaroid">
+                <img src="img/moment3.jpeg" alt="Mushroom Hunting" class="polaroid-image">
+                <div class="polaroid-note">Mushroom hunting date - The picture with your fish eye that I lost 🔭🫣</div>
+                <div class="polaroid-date">Oct 17 2025</div>
+            </div>
+            <div class="polaroid">
+                <img src="img/moment4.jpeg" alt="Cake" class="polaroid-image">
+                <div class="polaroid-note">My Birthday - You baked a cake for me 😋🎂</div>
+                <div class="polaroid-date">Oct 17 2025</div>
+            </div>
+            <div class="polaroid">
+              <img src="img/moment7.jpeg" alt="Museum" class="polaroid-image">
+              <div class="polaroid-note">Carnegie Museum - You were so cute 💕</div>
+              <div class="polaroid-date">Nov 15 2025</div>
+            </div>
+            <div class="polaroid">
+              <img src="img/moment9.jpeg" alt="picture of Bella" class="polaroid-image">
+              <div class="polaroid-note">Who is this cute baby? Mine!!! ✨🦋</div>
+              <div class="polaroid-date">Nov 22 2025</div>
+            </div>
+            <div class="polaroid">
+              <img src="img/moment5.jpeg" alt="Our picture inside bella's car" class="polaroid-image">
+              <div class="polaroid-note"> We look so good together 🧑‍❤️‍💋‍👩</div>
+                <div class="polaroid-date">Oct 17 2025</div>
+              </div>
+              <div class="polaroid">
+                <img src="img/moment10.jpeg" alt="Panera" class="polaroid-image">
+              <div class="polaroid-note">Panera Study date - We ended up collecting names for our future baby haha 😅😚</div>
+                <div class="polaroid-date">Nov 22 2025</div>
+              </div>
+              <div class="polaroid">
+                  <img src="img/moment6.jpeg" alt="Our picture at Museum" class="polaroid-image">
+                  <div class="polaroid-note"> Aww, we look so cuteeee 💗 </div>
+                  <div class="polaroid-date">Nov 15 2025</div>
+              </div>
+            <div class="polaroid">
+              <img src="img/moment11.jpeg" alt="Our halloween picture" class="polaroid-image">
+              <div class="polaroid-note">First Halloween - We totally slayed the joker costume yay 🔪🃏</div>
+              <div class="polaroid-date">Nov 23 2025</div>
+            </div>
+            <div class="polaroid">
+                <img src="img/moment8.jpeg" alt="Our selfie" class="polaroid-image">
+                <div class="polaroid-note">I just wanna keep you in my arms like this all the time 🥰</div>
+                <div class="polaroid-date">Nov 15 2025</div>
+            </div>
+            <div class="polaroid">
+                <img src="img/moment12.jpeg" alt="Softlock Interview snapshot" class="polaroid-image">
+                <div class="polaroid-note">Our Softlock Interview snap - I like this picture 🤗</div>
+                <div class="polaroid-date">Dec 05 2025</div>
+            </div>
+            <div class="polaroid">
+                <img src="img/moment13.jpeg" alt="Christmas picture of you, me and your mom" class="polaroid-image">
+                <div class="polaroid-note">Christmas🎄 - It was so wholesome building this christmas tree together.You mom looks so happy 🥰</div>
+                <div class="polaroid-date">Dec 13 2025</div>
+            </div>
+            <div class="polaroid">
+                <img src="img/moment14.jpeg" alt="Me with poster made by bela " class="polaroid-image">
+                <div class="polaroid-note">Aww..thats my christmas present!! 🎁 You made this poster of our pictures, I loved it 🥹</div>
+                <div class="polaroid-date">Dec 24 2025</div>
+            </div>
+            <div class="polaroid">
+                <img src="img/moment15.jpeg" alt="our picture" class="polaroid-image">
+                <div class="polaroid-note">Marking your territory huh? 💋😚</div>
+                <div class="polaroid-date">Dec 30 2025</div>
+            </div>
+            <div class="polaroid">
+                <img src="img/moment16.jpeg" alt="Our selfie" class="polaroid-image">
+                <div class="polaroid-note">So cuteeeee! ughh 😫</div>
+                <div class="polaroid-date">Dec 26 2025</div>
+            </div>
+            <div class="polaroid">
+                <img src="img/moment18.jpeg" alt="Our polaroid" class="polaroid-image">
+                <div class="polaroid-note">Our Photo booth polaroid hehe 🤗📸</div>
+                <div class="polaroid-date">Dec 30 2025</div>
+            </div>
+            <div class="polaroid">
+                <img src="img/moment19.jpeg" alt="Our snow tubing picture" class="polaroid-image">
+                <div class="polaroid-note">Snowtubing - You got upset with me cause I threw a snow ball at you, you brat! 😆😏</div>
+                <div class="polaroid-date">Jan 03 2025</div>
+            </div>
+            <div class="polaroid">
+                <img src="img/moment20.jpeg" alt="Ice skating" class="polaroid-image">
+                <div class="polaroid-note"> PGH rink ❄️- We ice skated (more like you ice skated haha , I was so scared!🥶) It was fun tho ⛸️. I really enjoyed it 😁</div>
+                <div class="polaroid-date">Jan 14 2025</div>
+            </div>
+            <div class="polaroid">
+                <img src="img/moment21.jpeg" alt="City" class="polaroid-image">
+                <div class="polaroid-note">Us bed rotting lol 🫠- Spent the longest 5 days weekend with you (thanks to snowstorm) 😉</div>
+                <div class="polaroid-date">Jan 24 2025</div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 60px;">
+            <button class="next-arrow show" id="dates-next">→</button>
+        </div>
+    </div>
+
+    <!-- Proposal Page -->
+    <div id="proposal-page">
+        <div id="proposal-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
