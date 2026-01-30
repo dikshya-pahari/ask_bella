@@ -62,30 +62,37 @@ function showChatMessage() {
 
 
 function showNextText() {
-    // Special animated chat for 4th message
-    // if (currentTextIndex === 3) {
-        // showChatMessage();
-        // return;
-    // }
+    // Index 3 is "Happy Valentines Bella!! Bla..Bla..." - show it in message box style
+    if (currentTextIndex === 3) {
+        showChatMessage();
+        return;
+    }
 
+    // For all other texts, show them in regular style
     if (currentTextIndex < landingTexts.length) {
         const textDiv = document.createElement('div');
         textDiv.className = 'landing-text';
         textDiv.textContent = landingTexts[currentTextIndex];
         landingTextContainer.appendChild(textDiv);
 
+        // If it's the last text, show the button after it disappears
         if (currentTextIndex === landingTexts.length - 1) {
             setTimeout(() => {
-                openBookBtn.style.display = 'block';
-                openBookBtn.classList.add('show');
-            }, 300); //put here 3000 in final
+                textDiv.remove();
+                // Show button after last text disappears
+                setTimeout(() => {
+                    openBookBtn.style.display = 'block';
+                    openBookBtn.classList.add('show');
+                }, 300);
+            }, 3000);
+        } else {
+            // For other texts, continue to next after disappearing
+            currentTextIndex++;
+            setTimeout(() => {
+                textDiv.remove();
+                showNextText();
+            }, 3000);
         }
-
-        currentTextIndex++;
-        setTimeout(() => {
-            textDiv.remove();
-            showNextText();
-        }, 3000); //put here 3000 in final
     }
 }
 
@@ -140,15 +147,9 @@ function launchRomanticConfetti() {
             Math.random() > 0.5 ? 'heart' : 'sparkle'
         );
 
-        // confetti.style.left = Math.random() * 100 + 'vw';
         confetti.style.left = Math.random() * 120 - 10 + 'vw';
         confetti.style.top = '-10px';
         confetti.style.animationDuration = 2 + Math.random() * 2 + 's';
-        // confetti.style.animationDelay = Math.random() * 0.5 + 's';
-        // const size = Math.random() * 10 + 4;
-        // confetti.style.width = size + 'px';
-        // confetti.style.height = size + 'px';
-
 
         document.body.appendChild(confetti);
         setTimeout(() => confetti.remove(), 4000);
@@ -174,6 +175,7 @@ function launchBurstConfetti() {
         setTimeout(() => confetti.remove(), 2000);
     }
 }
+
 function launchPetalConfetti() {
     for (let i = 0; i < 100; i++) {
         const confetti = document.createElement('div');
@@ -192,7 +194,7 @@ function launchPetalConfetti() {
 const wrongDatePhrases = [
     "You are making me sad 😢",
     "Ouch… that hurt a little",
-    "Hmm… that wasn’t our day 🥺",
+    "Hmm… that wasn't our day 🥺",
     "Nope 😭 try again, my love",
     "My heart says no 💕",
     "Really? 👀",
@@ -327,7 +329,7 @@ function showProposal() {
     proposalContent.appendChild(contentWrapper);
 
     const lines = [
-        'I want to build more memories with you 🐶',
+        'I want to build more memories with you 👉👈',
         'SO...'
     ];
 
@@ -352,7 +354,7 @@ function showProposal() {
             setTimeout(() => div.remove(), 2000);
         }, delay);
 
-        delay += 2000 + 1000; // 2.5s animation + 1s gap
+        delay += 2000 + 1000; // 2s animation + 1s gap
     });
 
     // Pop text: "I wanted to ask you" - disappears completely
@@ -365,7 +367,7 @@ function showProposal() {
         // Remove after pop animation
         setTimeout(() => popDiv.remove(), 2000);
     }, delay);
-    delay += 2000 + 1000; // 3s animation + 1s gap
+    delay += 2000 + 1000; // 2s animation + 1s gap
 
     // Final question with drop and bounce, and emoji above it
     setTimeout(() => {
@@ -455,7 +457,7 @@ function handleYes() {
         const finalMessage = document.createElement('div');
         finalMessage.className = 'proposal-text show';
         finalMessage.style.fontSize = '2.5rem';
-        finalMessage.innerHTML = 'Can’t wait to fill up more pages of our story together 📖💞';
+        finalMessage.innerHTML = 'Can\'t wait to fill up more pages of our story together 📖💞';
         proposalContent.appendChild(finalMessage);
     }, 2000);
 }

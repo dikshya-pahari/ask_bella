@@ -633,7 +633,6 @@ body::before {
     padding: 30px 20px;
     justify-content: center;
     align-items: center;
-  
     flex-direction: column;
     position: relative;
     text-align: center;
@@ -651,9 +650,7 @@ body::before {
     font-weight: 700;
     opacity: 0;
     display: inline-block;
-    /* animation: fadeInSlow 1.5s ease forwards; */
 }
-
 
 .fade-in-slow {
     animation: fadeInSlow 5s ease forwards;
@@ -683,7 +680,7 @@ body::before {
 }
 
 .fade-in-out {
-    animation: fadeInOut 2.5s ease forwards;
+    animation: fadeInOut 3s ease-in-out;
 }
 
 @keyframes fadeInOut {
@@ -691,6 +688,7 @@ body::before {
     25% { opacity: 1; transform: translateY(0);}
     80% { opacity: 1; transform: translateY(0);}
     100% { opacity: 0; transform: translateY(-20px);}
+    
 }
 
 /* Pop animation for "I wanted to ask you" */
@@ -719,10 +717,8 @@ body::before {
 .question {
     font-size: 3rem;
     color: var(--red);
-    /* background-color: red; */
     margin: 10px 0;
     font-weight: 700;
-    
 }
 
 /* Emoji image above question */
@@ -778,8 +774,6 @@ body::before {
     font-style: italic;
 }
 
-
-
 /* Confetti */
 .confetti {
     position: fixed;
@@ -806,6 +800,59 @@ body::before {
 @keyframes heartBeat {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.2); }
+}
+
+.heart-confetti {
+    position: fixed;
+    width: 16px;
+    height: 16px;
+    background: pink;
+    transform: rotate(45deg);
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 9999;
+    animation: fall linear forwards;
+}
+
+.heart-confetti::before,
+.heart-confetti::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.heart-confetti::before {
+    top: -8px;
+    left: 0;
+}
+
+.heart-confetti::after {
+    left: -8px;
+    top: 0;
+}
+
+.celebration-video {
+    animation: popIn 0.6s ease forwards;
+    opacity: 0;
+    width: 700px;
+    max-width: 80vw;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fall {
+    to {
+        transform: translate(var(--x), var(--y)) rotate(720deg);
+        opacity: 0;
+    }
 }
 
 /* Responsive */
@@ -886,61 +933,6 @@ body::before {
         font-size: 2.5rem;
     }
 }
-
-.heart-confetti {
-    position: fixed;
-    width: 16px;
-    height: 16px;
-    background: pink;
-    transform: rotate(45deg);
-    opacity: 0.9;
-    pointer-events: none;
-    z-index: 9999;
-    animation: fall linear forwards;
-}
-
-.heart-confetti::before,
-.heart-confetti::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background: inherit;
-    border-radius: 50%;
-}
-
-.heart-confetti::before {
-    top: -8px;
-    left: 0;
-}
-
-.heart-confetti::after {
-    left: -8px;
-    top: 0;
-}
-.celebration-video {
-    animation: popIn 0.6s ease forwards;
-    opacity: 0;
-    width: 700px;        /* sweet spot for desktop + mobile */
-    max-width: 80vw;     /* responsive on small screens */
-    height: auto;        /* keeps proportions */
-    margin-bottom: 20px;
-    /* border-radius: 20px; */
-}
-
-@keyframes popIn {
-    from { opacity: 0; transform: scale(0.8); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-
-@keyframes fall {
-    to {
-        transform: translate(var(--x), var(--y)) rotate(720deg);
-        opacity: 0;
-    }
-}
-
 
 @media (max-height: 700px) {
     .calendar-title {
